@@ -1,7 +1,7 @@
 {
-  "name": "monimanage",
+  "name": "TicketScapler",
   "version": "1.0.0",
-  "description": "A user-based finance and investment portfolio application",
+  "description": "Event planning and hosting application 2021\r  \"Great seats don't come cheap\"",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,12 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KENSTONEJAY/MoniManage.git"
+    "url": "git+https://github.com/KENSTONEJAY/TicketScapler.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KENSTONEJAY/MoniManage/issues"
+    "url": "https://github.com/KENSTONEJAY/TicketScapler/issues"
   },
-  "homepage": "https://github.com/KENSTONEJAY/MoniManage#readme"
+  "homepage": "https://github.com/KENSTONEJAY/TicketScapler#readme"
 }
