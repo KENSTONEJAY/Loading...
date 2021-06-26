@@ -12,9 +12,9 @@
 
 [Description](#description)
 
-[Technologies-&-tools-used](#Technologies-&-tools-used)
+[Technologies-Used](#Technologies-Used)
 
-[Usage](#usage)
+[Usage](#Usage)
 
 [Features](#Features)
 
@@ -28,7 +28,7 @@
 
 [Contributing](#Contributing)
 
-[Tests](#tests)
+[Tests](#Tests)
 
 [Deployed-Link](#deployed-link)
 
