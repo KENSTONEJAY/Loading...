@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Current/active navbar link */
+.center {
+  text-align: center;
+}
+.page-title {
+  font-size: 3rem;
+}
+a {
+  text-decoration: none;
+}
+.mb1 {
+  margin-bottom: .5rem;
+}
+.mt0 {
+  margin-top: 0;
+}
+h3, .h3 {
+  font-size: 1.5rem;
+}
+.gray, .mid-gray {
+  color: #aaa;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+.regular {
+  font-weight: 400;
+}
+.nameBox {
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content-header{
+color: #4ba2ad;
+}  
+.nameColor{
+color: white;
+}
+.divider{
+border:  1px solid rgb(194, 192, 192);
+background-color:  rgb(194, 192, 192);
+}
+
+ 
+.row{
+  padding-bottom: 10px;
+}
+.portfolio-content{
+  
+  margin-top: 2%;
+}
+.portfolio-image-size{
+   width: 300px;
+   height: 300px;
+   margin: 1%;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: #333; 
+  background-color: #333; 
+}
+#container {
+  min-height:100%;
+  position:relative;
+}
+#body {
+  padding:10px;
+  padding-bottom:60px;  
+}
+#footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   
+  background:#6cf;
+}
