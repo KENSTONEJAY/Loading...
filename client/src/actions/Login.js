@@ -19,7 +19,13 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
         })
-            .then(this.setState())
+            .then(()=>{
+                this.setState({
+                    username: "",
+                    password: ""
+                });
+                this.props.history.push('/home');
+            })
             .catch(err => console.log(err))
     }
 

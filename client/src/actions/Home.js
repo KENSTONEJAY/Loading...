@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LoginComponent from "../components/Login";
+import HomeComponent from "../components/Home";
 
 
 class Home extends Component {
@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (
 
-            <LoginComponent
+            <HomeComponent
                 handleLogin={this.handleLogin}
                 state={this.state}
             />

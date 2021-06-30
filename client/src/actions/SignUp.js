@@ -6,23 +6,29 @@ class SignUp extends Component {
 
     state = {
         name: "",
-        email:"",
-        password:""
+        email: "",
+        password: ""
     };
-   
-   
-   
+
     handleSubmit = event => {
         event.preventDefault();
-       
+
         API.signUp(this.state)
-            .then(this.setState())
+            .then(() => {
+                this.setState({
+                    name: "",
+                    email: "",
+                    password: ""
+                })
+                this.props.history.push('/login');
+            }
+            )
             .catch(err => console.log(err))
     }
 
     render() {
         return (
-        
+
             <SignUpComponent
                 handleSubmit={this.handleSubmit}
                 state={this.state}
