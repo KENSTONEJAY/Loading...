@@ -7,6 +7,7 @@ import Location from './actions/Location';
 import Concert from './actions/Concert';
 import TopEvent from './actions/TopEvent';
 import Sports from './actions/Sport';
+import SignUp from './actions/SignUp';
 function App() {
   return (
     
@@ -19,6 +20,7 @@ function App() {
         <Route path = "/concert" component = {Concert} />
         <Route path = "/topevent" component = {TopEvent} />
         <Route path = "/login" component = {Login} />
+        <Route path = "/signup" component = {SignUp} />
       </Switch>
     </Router>
   )

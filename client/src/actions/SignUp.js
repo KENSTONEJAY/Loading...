@@ -1,32 +1,30 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import SignUpComponent from "../components/SignUp/Signup";
-
+import SignUpComponent from "../components/SignUp";
 
 class SignUp extends Component {
 
     state = {
-        firstName: "",
-        lastName: "",
-        emailAddress:"",
+        name: "",
+        email:"",
         password:""
     };
-
+   
+   
    
     handleSubmit = event => {
         event.preventDefault();
-        console.log(this.state.username)
        
-        API.signUp(state)
+        API.signUp(this.state)
             .then(this.setState())
             .catch(err => console.log(err))
     }
 
     render() {
         return (
-
+        
             <SignUpComponent
-                handleLogin={this.handleSubmit}
+                handleSubmit={this.handleSubmit}
                 state={this.state}
             />
 

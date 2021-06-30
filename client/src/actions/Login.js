@@ -10,7 +10,7 @@ class Login extends Component {
         password: ""
     };
 
-
+    handleClick = () => this.props.history.push('/signup');
     handleLogin = event => {
         event.preventDefault();
         console.log(this.state.username)
@@ -29,6 +29,7 @@ class Login extends Component {
             <LoginComponent
                 handleLogin={this.handleLogin}
                 state={this.state}
+                handleClick ={this.handleClick}
             />
 
         )

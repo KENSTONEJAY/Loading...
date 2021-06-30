@@ -16,13 +16,13 @@ router.post('/login', async (req, res) => {
             res.status(400).json({ message: 'Password or Username is incorrect, please try again'});
             return;
         };
-        
-        req.session.user_id = validUsername.id;
+        console.log("req.session.before",req.session);
+        req.session.user_id = validUsername.dataValues.id;
         req.session.logged_in = true;
-        req.session.username = validUsername.email
+        req.session.username = validUsername.dataValues.email
         
-        console.log(req.session);
-        res.json({ user: validUsername.email, message: `Welcome ${validUsername.email}`})
+        console.log("req.session",req.session);
+        res.json({ user: validUsername.dataValues.email, message: `Welcome ${validUsername.dataValues.email}`})
     } catch (err) {
         res.status(400).json(err);
     }
