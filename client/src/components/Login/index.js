@@ -3,9 +3,11 @@ import React from "react";
 const LoginComponent = (props) => {
   return (
     <div className="container-fluid" >
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-        <h3>Login</h3>
+      <div className="row justify-content-center align-items-center h-100">
+        <div className="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+          <br />
+          <br />
+          <br />
           <form onSubmit={props.handleLogin} className="form-inline justify-content-center">
             <div className="form-group">
               <label>Email
