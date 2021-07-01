@@ -4,16 +4,17 @@
  "Great seats don't come cheap"
 
 ## Description
-TicketScalper is a user-based web application the enables the user to buy and sell tickeets to events created on the platform. This app allows one the make and participate in local and non-local events created on the platforms such as sporting events, concerts, performances, etc.
+	TicketScalper is a user-based event management and ticket exchange platform. Inspired by event services such as Stubhub, SeatGeek, and Eventbrite, TicketScapler allows the user to buy and sell tickets to local concerts, sporting events, and live performances. The service also allows the user to create and manage their own custom events and promote it to the platform's local audience.
+
 
  
 ## Table of Contents
 
 [Description](#description)
 
-[Technologies-&-tools-used](#Technologies-&-tools-used)
+[Technologies-Used](#Technologies-Used)
 
-[Usage](#usage)
+[Usage](#Usage)
 
 [Features](#Features)
 
@@ -27,7 +28,7 @@ TicketScalper is a user-based web application the enables the user to buy and se
 
 [Contributing](#Contributing)
 
-[Tests](#tests)
+[Tests](#Tests)
 
 [Deployed-Link](#deployed-link)
 
