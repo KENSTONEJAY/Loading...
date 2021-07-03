@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+class Navbar extends React.Component {
+  render() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ opacity: 93 }}>
       <a className="navbar-brand" href="#">TICKET SCALPER</a>
@@ -49,6 +50,7 @@ const Navbar = () => {
       </div>
     </nav>
   );
+}
 }
 
 export default Navbar;
