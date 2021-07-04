@@ -9,7 +9,7 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
+    "seed": "node seeds/seeds.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
@@ -36,9 +36,9 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
-    "mysql2": "^2.2.5",
+    "mongoose": "^5.3.16",
     "react-router-dom": "^5.2.0",
-    "sequelize": "^6.3.5"
+    "uuidv4": "^6.2.10"
   },
   "bugs": {
     "url": "https://github.com/KENSTONEJAY/TicketScapler/issues"

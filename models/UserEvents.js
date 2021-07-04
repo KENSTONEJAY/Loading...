@@ -1,42 +1,24 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const mongoose = require("mongoose");
+
+
+const { Model, Schema } = mongoose
 
 class UserEvents extends Model {}
 
-UserEvents.init(
+const userEventsSchema = new Schema(
     {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-      },
+      
       user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-          unique: false
-        }
+        type: String,
+        required: "Enter a name"
       },
-      events_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'events',
-          key: 'id',
-          unique: false
-        }
+      event_id: {
+        type: String,
+        required: "Enter a name"
       }
-    },
-    {
-      sequelize,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'UserEvents'
     }
   );
   
-  module.exports = UserEvents;
+  module.exports = mongoose.model(UserEvents, userEventsSchema, 'UserEvents');
   
 
