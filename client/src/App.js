@@ -8,13 +8,16 @@ import Concert from './actions/Concert';
 import TopEvent from './actions/TopEvent';
 import Sports from './actions/Sport';
 import SignUp from './actions/SignUp';
+import Header from './components/Header'
+import Footer from "./components/Footer";
 
 function App() {
   return (
   
 
   <Router>
-    <Navbar />
+    <Header />
+    
     <div>
       <Switch >
       <Route exact path = {["/", "/home"]} component = {Home} />
@@ -26,8 +29,9 @@ function App() {
         <Route exact path = "/signup" component = {SignUp} />
       </Switch>
       </div>
+      <Footer />
     </Router>
-
+    
   )
 };
 

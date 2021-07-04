@@ -1,17 +1,16 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React from "react";
-import Hero from "../Hero"
 {/* <img src={process.env.PUBLIC_URL + '/img/logo.png'} />; */}
 // import img from "../../img/giants.jpg"
 
 
 
-class Home extends React.Component {
+class Main extends React.Component {
 render (){
     return (
         <div>
-            <Hero></Hero>
-            <main id="main">
+          {/* <img src={img} alt="TicketScalper Logo"/> */}
+          <main id="main">
             <section id="team" className="team ">
               <div className="container">
                 <div className="d-flex justify-content-between align-items-center">
@@ -64,20 +63,10 @@ render (){
                 </div>
               </div></section>       
          </main>
-          {/* <img src={img} alt="TicketScalper Logo"/> */}
-            {/* ======= Payments Section ======= */}
-            <section id="clients" className="clients section-bg">
-              <div className="container">
-                <style dangerouslySetInnerHTML={{__html: "\n.img-container {\ntext-align: center;\ndisplay: block;\n}\n" }} />
-                <span className="img-container"> {/* Inline parent element */}
-                  <img src="assets/img/clients/payments.png" alt="" />
-                </span>
-              </div>
-            </section>{/* End Payments Section */}
-         </div> 
+         </div>
     );
   }
 };
 
 
-export default Home;
+export default Main;
