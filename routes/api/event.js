@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Event }  = require('../../models');
-const  {uuidv4} = require('uuidv4');
+const  {uuid} = require('uuidv4');
 
     //post a new event
 router.post("/",  async (req, res) => {
