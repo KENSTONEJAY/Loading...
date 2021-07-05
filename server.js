@@ -1,21 +1,19 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const routes = require("./routes");
 const session = require('express-session');
 const app = express();
 const PORT = process.env.PORT || 3001;
 var cors = require("cors");
-const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 app.use(cors());
 
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
   resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
+  saveUninitialized: true
+  
 };
 
 app.use(session(sess));
@@ -31,6 +29,8 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/ticket_scalper", {
+  useNewUrlParser: true,
+  useFindAndModify: false
 });
+app.listen(PORT, () => console.log('Now listening'));
