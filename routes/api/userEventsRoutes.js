@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { UserEvents,Event } = require('../../models');
+const { UserEvents, Event } = require('../../models');
 
 // User-saved fav events
 router.post('/', async (req, res) => {
@@ -19,16 +19,16 @@ router.get("/", async (req, res) => {
         user_id: req.query.userId
       }
     );
-    console.log('eventData',eventData);
+    console.log('eventData', eventData);
     let data = [];
-    eventData.forEach(async function (events) {
-      console.log(events);
+    for (var i = 0; i < eventData.length; i++) {
+
       const event = await Event.find({
-        event_id : events.event_id
-      });    
-      console.log('event',event); 
+        event_id: eventData[i].event_id
+      });
+      console.log('event', event);
       data.push(event);
-    })
+    }
     res.json(data);
   }
   catch (err) {
