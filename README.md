@@ -14,6 +14,8 @@
 
 [Technologies-Used](#Technologies-Used)
 
+[Installation](#Installation)
+
 [Usage](#Usage)
 
 [Features](#Features)
@@ -42,15 +44,44 @@
 3 JavaScript
 4 Node.js
 5 React 
-6 Dependencies
+6 MongoDB 
+7 Dependencies
+  * bcrypt
+  * dotenv
+  * mongoose
+  * express
+  * express-session
+  * cors
+
+## Installation
 
 
 ## Usage 
 
 
+
 ## Features 
+### Homepage 
+TicketScapler opens up to a beautiful homepage that presents tabs for the user to navigate the site as well as view some of major upcoming events that they may be interested in. The Homepage offers the following features:
+
+1. Sign up page 
+2. Log in page
+3. Location tab 
+4. Sports events page
+5. concert events page
+6. Theater and comedy page
+7. Top events page 
+8. User dashboard 
 
 ## Future-Development
+
+* Buy and sell tickets to licensed events 
+* Buy and sell tickets abroad 
+* On-site currency exchange 
+* Sign in/Login from social media platforms 
+* Event reviews and ratings 
+* Improved UI/UX design
+
 
 ## Team-Members
 
