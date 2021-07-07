@@ -7,5 +7,8 @@ export default {
   },
   signUp: function(loginData) {
     return axios.post("http://localhost:3001/api/users/signup", loginData);
+  },
+  events: function(queryparams) {
+    return axios.get("http://localhost:3001/api/events?"+queryparams);
   }
 };

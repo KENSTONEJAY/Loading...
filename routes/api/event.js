@@ -19,7 +19,12 @@ router.get("/",  async (req, res) => {
   try {
     let where = {};
     if(req.query.stateId){
-      where.event_state = req.query.stateId
+      if(req.query.stateId.length){
+        where = {"event_state" : { $in : req.query.stateId}};
+      }else{
+        where.event_state = req.query.stateId
+      }
+      
     }
     if(req.query.eventType){
       where.event_type = req.query.eventType
