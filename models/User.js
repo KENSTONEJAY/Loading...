@@ -9,6 +9,7 @@ class User extends Model {
   }
 }
 
+
 //Fields for User model
 const userSchema = new Schema(
   {
