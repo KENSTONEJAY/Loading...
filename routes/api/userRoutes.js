@@ -3,26 +3,27 @@ const { User } = require('../../models');
 
 router.post('/login', async (req, res) => {
     try {
-        const validUsername = await User.findOne({where: {email: req.body.username}});
-        console.log('user',validUsername);
-        if (!validUsername) {
+        console.log('req.body.username',req.body.username);
+        const validUsername = await User.find({email: req.body.username});
+        console.log('user',validUsername[0]);
+        if (!validUsername[0]) {
             res.status(400).json({ message: 'Password or Username is incorrect, please try again'});
             return;
         }
        
-        const validPassword = await validUsername.checkPassword(req.body.password);
+        const validPassword = await validUsername[0].checkPassword(req.body.password);
         console.log('req.body.password',validPassword);
         if (!validPassword) {
             res.status(400).json({ message: 'Password or Username is incorrect, please try again'});
             return;
         };
         console.log("req.session.before",req.session);
-        req.session.user_id = validUsername.dataValues.id;
+        req.session.user_id = validUsername[0]._id;
         req.session.logged_in = true;
-        req.session.username = validUsername.dataValues.email
+        req.session.username = validUsername[0].email
         
         console.log("req.session",req.session);
-        res.json({ user: validUsername.dataValues.email, message: `Welcome ${validUsername.dataValues.email}`})
+        res.json({ user: validUsername[0].email, message: `Welcome ${validUsername[0].email}`})
     } catch (err) {
         res.status(400).json(err);
     }

@@ -8,9 +8,10 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
 import 'font-awesome/css/font-awesome.min.css';
 import './style.css';
-
+import {Provider} from 'react-redux';
+import store from './actions/store';
 ReactDOM.render(
-    <App />,
+  <Provider store={store}><App /></Provider>,
   document.getElementById('root')
 );
 

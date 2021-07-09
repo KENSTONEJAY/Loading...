@@ -5,7 +5,7 @@ const { Model, Schema } = mongoose
 
 class User extends Model {
   checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
+    return loginPw===this.password;
   }
 }
 

@@ -49,6 +49,39 @@ const eventData = [
     "zip_code": "06103",
     "event_date": new Date("2021-09-01"),
     "event_id": uuid ()
+  },
+  {
+    "event_name": "Soccer",
+    "event_type": "sport",
+    "event_venue": "Excel center",
+    "event_description": "exciting concert",
+    "event_state": "NJ",
+    "event_city": "Jersey City",
+    "zip_code": "06123",
+    "event_date": new Date("2021-10-01"),
+    "event_id": uuid ()
+  },
+  {
+    "event_name": "Madonna Events",
+    "event_type": "concert",
+    "event_venue": "Xfinity center",
+    "event_description": "Madonna concert",
+    "event_state": "NY",
+    "event_city": "Albany",
+    "zip_code": "06143",
+    "event_date": new Date("2021-09-20"),
+    "event_id": uuid ()
+  },
+  {
+    "event_name": "Hamilton New York",
+    "event_type": "concert",
+    "event_venue": "Broadway center",
+    "event_description": "Hamilton New York",
+    "event_state": "NY",
+    "event_city": "New York City",
+    "zip_code": "06143",
+    "event_date": new Date("2021-09-20"),
+    "event_id": uuid ()
   }
 ]
 User.deleteMany({})
