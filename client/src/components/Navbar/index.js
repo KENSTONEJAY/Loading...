@@ -1,56 +1,52 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import {connect} from "react-redux"
+import { logoutUser } from "../../actions/authActions";
 class Navbar extends React.Component {
+  logout=()=>{
+    this.props.logoutUser();
+  };
   render() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ opacity: 93 }}>
-      <a className="navbar-brand" href="#">TICKET SCALPER</a>
-      <div className="container">
-        <div className="row-cols-auto">
-          <div className="navbar" id="navbarNav">
-            <NavLink
-              to="/home"
-              className="nav-link"
-            >
-              Home
-              </NavLink>
-            <NavLink
-              to="/location"
-              className="nav-link"
-            >
-              Location
-              </NavLink>
-            <NavLink
-              to="/sports"
-              className="nav-link"
-            >
-              Sports
-              </NavLink>
-            <NavLink
-              to="/concert"
-              className="nav-link"
-            >
-              Concerts
-              </NavLink>
-            <NavLink
-              to="/topevent"
-              className="nav-link"
-            >
-              Top Events
-              </NavLink>
-            <NavLink
-              to="/login"
-              className="nav-link"
-            >
-              Login
-              </NavLink>
+    let guestNav = (
+    <div className="navbar" id="navbarNav">
+      <div className="navbar navbar-left">
+      <NavLink to="/home" className="nav-link"  > Local </NavLink>
+      <NavLink to="/tri-state" className="nav-link" > Tri State </NavLink>
+
+      </div>
+      <div className="navbar navbar-right">
+        <NavLink to="/signup" className="nav-link"   > Register </NavLink>
+        <NavLink to="/login" className="nav-link"   > Login </NavLink>
+      </div>
+    </div>)
+    let userNav = (
+      <div className="navbar" id="navbarNav">
+        <NavLink to="/home" className="nav-link"  > Local </NavLink>
+        <NavLink to="/tri-state" className="nav-link" > Tri State </NavLink>
+        <div className="navbar navbar-right">
+          <NavLink to="/logout" className="nav-link"   onClick={this.logout} > Log out </NavLink>
+        </div>
+      </div>)
+    return (
+      <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+        <a className="navbar-brand" href="#">TICKET SCALPER</a>
+        <div className="container">
+          <div className="row-cols-auto">
+            {this.props.auth.isLoggedIn? userNav:guestNav}
           </div>
         </div>
-      </div>
-    </nav>
-  );
+      </nav>
+    );
+  }
 }
+const mapStateToProps = state =>{
+  return{
+    auth: state.auth
+  }
 }
-
-export default Navbar;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logoutUser: () => dispatch(logoutUser()),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

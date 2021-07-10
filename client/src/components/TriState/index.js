@@ -7,7 +7,7 @@ import CommonComponent from "../Common";
 
 
 
-class Home extends React.Component {
+class TriState extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,11 +21,11 @@ class Home extends React.Component {
 
     };
   }
-  async componentWillMount() {
+  async componentDidMount() {
     let self = this;
     console.log('in moiunt')
-    let events = await API.events('stateId=CT')
-    console.log('events it true',events);
+    let events = await API.events('stateId=CT&stateId=NY&stateId=NJ')
+
     let data = events.data;
     for (var i = 0; i < data.length; i++) {
       if (data[i].event_type === 'sport') {
@@ -42,7 +42,7 @@ class Home extends React.Component {
     }
     console.log('setting it true');
     this.state.isLoading =  true;
-    this.props.history.push('/home');
+    this.props.history.push('/tri-state');
   }
   render() {
     console.log('state',this.state.isLoading);
@@ -53,14 +53,17 @@ class Home extends React.Component {
       </Spinner>
       );
     } else {
+      console.log('state',this.state.events);
       return (
+
           <CommonComponent
               state= {this.state}
-          />  
+          />
+          
       );
     }
   }
 };
 
 
-export default Home;
+export default TriState;
