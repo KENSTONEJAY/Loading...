@@ -1,28 +1,36 @@
 import React from "react";
 
-const Login = (props)=>{
-    return (
-        <div class="container">
-        <div class="jumbotron" />
-        <h1 class="text-center">Find Your Tickets</h1>
-        <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="TicketScalper Logo" width="250" height="250" />
-        <h3>Great Tickets Dont Come Cheap!</h3>
-        <br />
-        <form className="container" />
-            <div class="mb-3" />
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleEmail" placeholder="email@example.com" 
-              onChange={props.handleUserName} required />
-            <div class="mb-3" />
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="examplePassword" placeholder="Password" 
-              onChange={props.handlePassword} required />
-            <button type="submit" class="btn btn-primary">Sign In</button>
+const LoginComponent = (props) => {
+  return (
+    <div className="container-fluid" >
+      <div className="row justify-content-center align-items-center h-100">
+        <div className="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+          <br />
+          <br />
+          <br />
+          <form onSubmit={props.handleLogin} className="form-inline justify-content-center">
+            <div className="form-group">
+              <label>Email
+              <input type="email" className="form-control form-control-lg" id="exampleEmail" placeholder="email@example.com"
+                  onChange={(e) => props.state.username = e.target.value} required />
+              </label>
+            </div>
+            <div className="form-group">
+              <label >Password
+              <input type="password" className="form-control form-control-lg" id="examplePassword" placeholder="Password"
+                  onChange={(e) => props.state.password = e.target.value} required />
+              </label>
+            </div>
             <br />
-            <h2>Or new to the page?</h2>
-            <button type="button" class="btn btn-primary" onClick={props.handleSubmit}>Sign Up</button>
+            <button type="submit" className="btn btn-info btn-lg btn-block" >Sign In</button>
+            <br />
+            <h2>New User?</h2>
+            <button type="button" className="btn btn-info btn-lg btn-block" onClick={props.handleClick}>Sign Up</button>
+          </form>
         </div>
-    )
+      </div>
+    </div>
+  )
 };
 
-export default Login;
+export default LoginComponent;

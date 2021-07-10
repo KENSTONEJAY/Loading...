@@ -6,7 +6,9 @@ import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
-import 'font-awesome/css/font-awesome.min.css'
+import 'font-awesome/css/font-awesome.min.css';
+import './style.css';
+
 ReactDOM.render(
     <App />,
   document.getElementById('root')
