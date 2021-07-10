@@ -37,7 +37,6 @@
 </head>
 
 <body>
-  <div id="root"></div>
 
   <!-- ======= Header =======
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -50,18 +49,24 @@
       <!-- <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-
-          <li class="dropdown"><a href="#"><span>Location</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="login.html">Log In</a></li>
+        </ul>
+          <li class="dropdown"><a href="#"><span>Top Events</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="about.html">Local</a></li>
               <li><a href="team.html">United States</a></li>
             </ul>
           </li>
-          <li><a href="services.html">Sports</a></li>
-          <li><a href="portfolio.html">Concerts</a></li>
-          <li><a href="pricing.html">Theater & Comedy</a></li>
-          <li><a href="blog.html">Top Events</a></li>
-          <li><a href="contact.html">Sell Tickets</a></li>
+          <li><a href="sports.html">Sports</a></li>
+          <li><a href="concerts.html">Concerts</a></li>
+          <li><a href="comedy.html">Comedy</a></li>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
           <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -74,8 +79,10 @@
     <!-- </div>
   </header>End Header -->
 
-  <!-- ======= Events Section ======= -->
-  <!-- <section id="hero">
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -83,17 +90,22 @@
       <div class="carousel-inner" role="listbox"> -->
 
         <!-- Slide 1 -->
-        <!-- <div class="carousel-item active" style="background-image: url(assets/img/summerslam.jpg)">
+
+        <div class="carousel-item active" style="background-image: url(assets/img/slide/summerslam.png)">
+
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown"><span>HOTTEST SUMMER EVENTS</span></h2>
+              <h2 class="animate__animated animate__fadeInDown">HOTTEST SUMMER EVENTS</h2>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Experience It Live</a>
             </div>
           </div>
         </div> -->
 
         <!-- Slide 2 -->
-        <!-- <div class="carousel-item" style="background-image: url(assets/img/yankees.jpg)">
+
+        <div class="carousel-item" style="background-image: url(assets/img/slide/yankees.png)">
+
+
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">SUMMER IS BETTER AT THE BALLPARK</h2>
@@ -103,7 +115,9 @@
         </div> -->
 
         <!-- Slide 3 -->
-        <!-- <div class="carousel-item" style="background-image: url(assets/img/sell.jpg)">
+
+        <div class="carousel-item" style="background-image: url(assets/img/slide/selling.png)">
+
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">PLANS CHANGED?</h2>
@@ -123,64 +137,73 @@
       </a>
 
     </div>
-  </section>End Events -->
+
+  </section><!-- End Hero -->
+
 
   <!-- <main id="main">
 
-    <section id="team" class="team ">
+<!-- ======= Team Section ======= -->
+<section id="team" class="team section-bg">
+  <div class="container">
 
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Upcoming Events</h2>
+    <div class="section-title">
+      <h2>TOP WEEKLY EVENTS</h2>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-6">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="assets/img/bosnyy.png" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>NEW YORK YANKEES</h4>
+            <span>Yankee Stadium</span>
+            <p>July 15th - 18th</p>
+            <div class="social">
+              <a href=""><i class="ri-heart-fill"></i></a>
+            </div>
+          </div>
         </div>
+      </div>
 
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/chappelle.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Dave Chappelle</h4>
-                <span>Foxwoods Casino</span>
-                <p>June 24th - 26th</p>
-              </div>
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="assets/img/luke.png" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>LUKE BRYAN</h4>
+            <span>Xfinity Theatre</span>
+            <p>July 16th</p>
+            <div class="social">
+              <a href=""><i class="ri-heart-fill"></i></a>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/yardgoats.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Hartford Yard Goats</h4>
-                <span>Dunkin Donuts Park</span>
-                <p>vs. Richmond</p>
-                <p>June 24th - 26th</p>
-              </div>
-            </div>
-          </div>
+    </div>
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/bosnyy.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Red Sox vs. Yankees</h4>
-                <span>Fenway Park</span>
-                <p>June 24th - 26th</p>              
-              </div>
-            </div>
-          </div>
+  </div>
+</section><!-- End Team Section -->
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/nymphi.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Mets vs. Phillies</h4>
-                <span>Citi Field</span>
-                <p>June 24th - 26th</p>
-              </div>
+        <!-- ======= Payments Section ======= -->
+        <section id="clients" class="clients section-bg">
+          <div class="container">
+            <style>
+                .img-container {
+                  text-align: center;
+                  display: block;
+                }
+              </style>
+            </head>
+            <body>
+              <span class="img-container">
+              <img src="assets/img/payments.png" alt="">
+              </span>
             </div>
+
+        </section><!-- End Payments Section -->
+
           </div>
 
         </div>
@@ -206,6 +229,7 @@
         </div>
       </section>End Payments Section -->
 
+
   <!-- </main>End #main -->
 
   <!-- ======= Footer ======= -->
@@ -218,10 +242,10 @@
             <div class="footer-info">
               <h3>Ticket Scalper</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                275S S Orange St<br>
+                New Haven, CT 06510, USA<br><br>
+                <strong>Phone:</strong>(203)349-0033<br>
+                <strong>Email:</strong> info@ticketscalper.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -256,8 +280,8 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Deals to Your Inbox</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <h4>Epic Events and Incredible Deals</h4>
+            <p>Straight to Your Inbox</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
