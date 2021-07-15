@@ -7,7 +7,8 @@
 	TicketScalper is a user-based event management and ticket exchange platform. Inspired by event services such as Stubhub, SeatGeek, and Eventbrite, TicketScapler allows the user to buy and sell tickets to local concerts, sporting events, and live performances. The service also allows the user to create and manage their own custom events and promote it to the platform's local audience.
 
 ## Live App URL
-	https://ticket-scalper-12345.herokuapp.com/
+	[Ticket Scalper](https://ticket-scalper-12345.herokuapp.com/)
+	
  
 ## Table of Contents
 
